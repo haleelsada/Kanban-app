@@ -36,34 +36,20 @@ source .env/bin/activate
 ```
 sh local_run.sh
 ```
-5.open a new terminal branch to run celery worker
-```
-sh local_workers.sh
-```
-6.open another terminal to run celery beat
-```
-sh local_beat.sh
-```
-7.open browser and search
+5.open browser and search
 ```
 http://127.0.0.1:8080/
 ```
 ```
 here are few default users:
-name: batman@gmail.com
-password: batman
-name: thomasshelby@gmail.com
-password: thomas
-name: jacksparrow@gmail.com
-password: jack
-name: jamesbond@gmail.cm
-password: james
-name: joker@gmail.com
-password: joker
+name: neo
+password: neo
+name: johnwick
+password: johnwick
 ```
 
 ## Contributers
 [Haleel Sada](https://github.com/haleelsada)
 ## Licence
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/haleelsada/Netvork/blob/main/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/haleelsada/Kanban-app/blob/main/LICENSE) file for details.
 
