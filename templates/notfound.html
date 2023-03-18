@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Error</title>
+		<style>
+			body {background-color:#0c151c;
+				
+			}
+			
+			.error {
+				
+				margin: auto;
+				text-align:center;
+				}
+			.h {
+				font-size:100px;
+				font-family:impact,sans-serif;
+				margin-bottom:10px;
+				}
+		</style>
+	</head>
+	<body>
+		<div class="error">
+		<h1 class="h">404</h1>
+		<p>oops! we're sorry</p>
+		<h1>Incorrect username or password</h1>
+		<h2>Please try again</h2>
+		<form method="get" action="{{url_for('login')}}">
+		<b style="font-size:15px;"><button style="font-size:15px;">Click</button> to return to home page</b>
+		</form>
+		</div>
+	</body>
+</html>

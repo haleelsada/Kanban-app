@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>NewCard</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+		<style>
+			body{
+				margin: 0;
+				background-color:#0c151c;
+				padding-top:100px;
+			}
+			.navbar{
+				background-color:#000a15;
+				
+				}
+			.nav-link{
+				color:#c1bcff;
+				}
+			.navbar-nav{
+				display:flex;
+				flex-direction:row;
+				}
+			.nav-item{
+				border-radius: 9px;
+				padding: 0px 8px 0px 8px;
+				margin-left:22px;
+				font-weight: bold;
+				}
+			.nav-item:hover{
+				background-color:#c1bcff;
+				}
+			.active{
+	  			background-color: #c1bcff;
+	  			}
+	  		.form {
+				width:520px;
+				margin:40px auto;
+				
+				}
+			.input{
+				margin:10px 5px 10px 0px;
+				padding:8px;
+				border-radius:10px;
+				}
+			.button{
+				width:100px;
+				height:50px;
+				color:#0c151c;
+				font-weight:bold;
+				}
+			
+			h2{
+			color:#c1bcff;
+			padding:0px 0px 10px 0px;
+			
+			}
+			.form-select{
+			color:#767676;
+			}	
+					
+		</style>
+	</head>
+	<body>
+		<nav class="navbar fixed-top">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <h3 style="color:#c1bcff; padding:10px;"><b>WELCOME {{name}}</b></h3>
+			</div>
+
+
+			<ul class="navbar-nav">
+			  <li class="nav-item"><a class="nav-link" href="/board/{{uid}}">
+			  		Home
+				    <img src="{{url_for('static', filename='home.png')}}" style="padding-bottom:6px;"alt="" width="18" height="">
+			  		</a></li>
+			  <li class="nav-item"><a class="nav-link" href="/summary/{{uid}}">
+			  	Summary
+			  	<img src="{{url_for('static', filename='grid.png')}}" style="padding-bottom:4px;"alt="" width="18" height=""">
+			  	</a></li>
+			  <<li class="nav-item"><a class="nav-link" href="/logout" onclick="return confirm('Are you sure?')">
+				Logout
+				<img src={{url_for('static', filename='logout.png')}} style="padding-bottom:4px;"alt="" width="18" height="">
+				</a></li>
+			</ul>
+		  </div>
+		</nav>
+		<div class="form">
+			<h2><b>Add a Card</b></h2>
+			
+			<p style="font-weight:bold; color:#c1bcff; margin-bottom:5px; padding:12px 0px 0px 0px; font-size:18px;">
+				Name	
+			</p>
+			<form method= "POST">
+				
+				<input class="input" type="text" name="cardname" placeholder="title" required/>
+				
+				<textarea class="input" name="content" cols="40" rows="2" placeholder="content" required></textarea>
+				<p style="font-weight:bold; color:#c1bcff; margin-bottom:5px; padding:12px 0px 0px 0px; font-size:18px;">
+				completed ?
+				</p>
+				<select class="form-select" aria-label="Default select example" name='completed'>
+				  <option value="No">No</option>
+				  <option value="Yes">Yes</option>
+				</select>
+				<p style="font-weight:bold; color:#c1bcff; padding:12px 0px 0px 0px; margin-bottom:0px; font-size:18px;">
+				Deadline
+				</p>
+				
+				<input type="date" class="date input" id="deadline" name="deadline"/>
+				<br>
+			
+				<input class="input button" type="submit" name="save" value="Save"/>
+				
+				<a href="/board/{{uid}}"><input class="input button" type="button" name="delete" value="Cancel"/></a>
+			</form>
+			
+			
+		
+		
+		</div>
+		
+		
+		
+	</body>
+</html>
